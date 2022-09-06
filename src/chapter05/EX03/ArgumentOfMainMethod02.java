@@ -25,6 +25,8 @@ public class ArgumentOfMainMethod02 {
 		System.out.println("==Arrays.toString==");
 		System.out.println(Arrays.toString(args));
 		
+		System.out.println();
+		
 		
 		
 		
