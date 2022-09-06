@@ -20,7 +20,7 @@ public class Using_Array09 {
 		System.out.println(s2);
 	
 		//국어 80 영어 50 수학 77 과학 88   <==전체 라인을 인풋 받아서 공백을 기준으로 잘라서 배열에 저장
-		
+		     
 		
 		
 		
