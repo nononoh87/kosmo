@@ -41,21 +41,6 @@ public class ArgumentOfMainMethod {
 		
 		System.out.println(d + 1);		//정수 + 정수	// 4
 		System.out.println(e + 1);		//실수 + 정수	// 6.8
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 
 	}
 

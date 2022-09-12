@@ -9,7 +9,7 @@ public class Using_Array04 {
 		//   - 참조 자료형 :  변수는 Stack에 저장 , 값은 Heap 에 저장
 		//         변수의  Heap  영역의 주소값이 들어있다.
 		//   - 기본 자료형 : 변수, 값 모두 Stack에 저장되어 있다.
-		//          boolean, byte, short, int, long,float,double, char
+		//          boolean, byte, short, int, long, float, double, char
 		//기본자료형 배열 변수 :
 		//참조자료형 배열 변수 : String
 		
