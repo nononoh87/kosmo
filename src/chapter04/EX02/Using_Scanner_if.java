@@ -28,11 +28,11 @@ public class Using_Scanner_if {
 		
 		if (avg >= 90.0) {
 			System.out.println("A학점 입니다. :" +avg);
-		}else if(avg >= 80.0) {
+		}else if (avg >= 80.0) {
 			System.out.println("B학점 입니다. :" +avg);
-		}else if(avg >= 70.0) {
+		}else if (avg >= 70.0) {
 			System.out.println("C학점 입니다. :" +avg);
-		}else if(avg >= 60.0) {
+		}else if (avg >= 60.0) {
 			System.out.println("D학점 입니다. :" +avg);
 		}else {
 			System.out.println("F학점 입니다. :" +avg);

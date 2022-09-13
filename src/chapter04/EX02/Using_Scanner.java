@@ -12,7 +12,7 @@ public class Using_Scanner {
 		      -콘솔을 통해서 값(정수(int), 문자열next(), 실수nextln(), 문자)을 받아서 처리
 		      -객체를 임포트 해서 사용해야 한다. (import java.util.Scanner)
 		      -공백이나 엔터를 사용해서 여러개 값을 넣을 수 있다.
-		      -Scanner sc를 사용ㅇ후에는 sc.close()를 사용해서 객체를 메모리에서 제거.
+		      -Scanner sc를 사용후에는 sc.close()를 사용해서 객체를 메모리에서 제거.
 		      
 		 */
 		
@@ -31,7 +31,7 @@ public class Using_Scanner {
 		 String b =sc.next(); //콘솔에서 문자열을 받아서 변수 b 에 할당.
 	     System.out.println("변수 b 출력: " +b);
 	     
-	     System.out.println("반그시 실수값을 입력하세요>>>");
+	     System.out.println("반드시 실수값을 입력하세요>>>");
          double c = sc.nextDouble();
          System.out.println("변수 c를 출력:" + c);
          

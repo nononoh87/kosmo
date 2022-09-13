@@ -28,7 +28,7 @@ public class Using_Switch04 {
 		default:
 			System.out.println("존재하지 않는 달 입니다.");
 		}
-		System.out.printf("%d 달은 %d 일 까지 존재 합니다.", month, day);
+		System.out.printf("%d월 달은 %d일 까지 존재 합니다.", month, day);
 		
 		sc.close();
 	}

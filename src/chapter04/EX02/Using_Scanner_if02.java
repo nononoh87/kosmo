@@ -27,8 +27,7 @@ public class Using_Scanner_if02 {
 		}else {
 		    	System.out.println("불합격");     // 60점 미만이면 1,2,3,4 모두 불합격
 		    }
-	
-		
+
 		sc.close();
 	}	
 

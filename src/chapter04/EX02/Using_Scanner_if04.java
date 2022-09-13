@@ -16,22 +16,21 @@ public class Using_Scanner_if04 {
 		
 		Scanner sc = new Scanner(System.in);
 		
-	  System.out.println("주문할 메뉴를 입력하세요.>>");
-	  String order = sc.next();
-	  int prise = 0;
+	    System.out.println("주문할 메뉴를 입력하세요.>>");
+	    String order = sc.next();
+	    int prise = 0;
 	  
-	  if (order.equals("에스프레소")||order.equals("아포가토")||order.equals("카페라떼")) {
-		  prise =3500;
-	  }else if (order.equals("아메리카노")) {
-		  prise = 2500;
-	  }else {
-		  System.out.println("우리 매장에 없는 메뉴입니다.");
-	  }
-	  System.out.printf("주문하신 %s는 가격이 %d입니다.",order, prise);
+	    if (order.equals("에스프레소")||order.equals("아포가토")||order.equals("카페라떼")) {
+	    	prise =3500;
+	    }else if (order.equals("아메리카노")) {
+	    	prise = 2500;
+	    }else {
+	    	System.out.println("우리 매장에 없는 메뉴입니다.");
+	    }
+	    System.out.printf("주문하신 %s는 가격이 %d원 입니다.",order, prise);
 				
 	    sc.close();
-		
-
+	    
 	}
 
 }

@@ -8,7 +8,7 @@ public class ConditionalOperator {
 		//     조건이 참이면 '참'을 실행, 조건이 거짓이면 '거짓'을 실행
 		//        : 깃발
 		
-		int value1 = (3>5)? 6:9;   //조건이 false 이므로 면수에 9가 할당
+		int value1 = (3>5)? 6:9;   //조건이 false 이므로 변수에 9가 할당
 		System.out.println(value1);
 		
 		int value2 = (5>3)? 10:20; //조건이 true 이므로 변수에 10가 할당

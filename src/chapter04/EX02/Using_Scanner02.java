@@ -21,7 +21,7 @@ public class Using_Scanner02 {
 		double cc = sc.nextDouble();  //콘솔 인풋, 실수
 		
 		System.out.printf("당신의 이름은 %s 이고 나이는 %d 이고,"
-				+ "당신의 몸무게는 %f 입니다.", aa, bb, cc);
+				+ "당신의 몸무게는 %4.2f 입니다.", aa, bb, cc);
 		
 		System.out.print("당신의 이름은"+aa+"이고 나이는"+bb+"이고,"
 				+"당신의 몸무게는"+cc+"입니다. \n");

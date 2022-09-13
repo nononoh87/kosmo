@@ -30,7 +30,7 @@ public class Using_Switch02 {
 			System.out.println("우리 매장에 없는 메뉴입니다.");
 		}
 		
-		System.out.printf("주문하신 커피는 %s 이고, 가격은 %d 입니다.", order, prise);
+		System.out.printf("주문하신 커피는 %s 이고, 가격은 %d원 입니다.", order, prise);
 		
 		sc.close();
 	    

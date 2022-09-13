@@ -49,7 +49,7 @@ public class consoloutput03 {
         
         //여자의 평균 나이는 100살이 될것입니다. 평균적으로 일요일에 많이 태어났습니다.
         
-        System.out.println(i +"는 평균 나이는" + g + "살이 될것입니다. 평적으로"
+        System.out.println(i +"의 평균 나이는" + g + "살이 될것입니다. 평적으로"
         		+ h +"에 많이 태어났습니다.");
         System.out.printf("%s 의 평균 나이는 %d 가 될것입니다. 평균적으로 %s 에 많이 태어났습니다."
         		,i,g,h);

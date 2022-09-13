@@ -24,7 +24,7 @@ public class AsssignmentOperator {
 		 */
 		
 		int value1 = 3;
-		value1 = value1 + 3;             //대압 연산자는 제일 나중에 적용
+		value1 = value1 + 3;             //대입 연산자는 제일 나중에 적용
 		System.out.println(value1);
 		System.out.println("=================");
 		
