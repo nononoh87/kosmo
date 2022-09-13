@@ -50,7 +50,10 @@ public class Using_For05 {
 
 		for (int j = 1; j < 10; j++) {
 			System.out.print(i + " * " + j + " = " + i * j);
+<<<<<<< HEAD
 			System.out.print("\t");
+=======
+>>>>>>> f4130b56f9586150d041febd8127e90608131d93
 		}
 		sc.close();
 

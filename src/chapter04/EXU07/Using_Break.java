@@ -7,7 +7,7 @@ public class Using_Break {
 		//    -1단계만 탈출
 		// for, while, do while (반복문을 탈출할때 사용)
 		
-		//# 1. 단일 ioop 에서 탈출
+		//# 1. 단일 loop 에서 탈출
 		for (int i =0 ; i < 10 ; i++) {
 			System.out.println(i);
 			break;                       //한단계 탈출
