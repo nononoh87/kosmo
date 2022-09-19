@@ -20,7 +20,7 @@ public class Customer {
 		void initCustomer() {
 			this.customerGrade = "Silver";
 			this.bonusPoint = 10;
-			this.bonusRatio = 0.01;
+			this.bonusRatio = 0.05;
 	}
 
 }
