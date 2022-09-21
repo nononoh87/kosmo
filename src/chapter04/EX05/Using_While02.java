@@ -39,19 +39,6 @@ public class Using_While02 {
 	        System.out.println();
         }while (true);
         System.out.println("프로그램을 종료합니다.");
-	        
-	        
-	        
-	        
-	        
-	        
-    		
-	    		
-		
-		
-	    
-		
-
 	}
 
 }
