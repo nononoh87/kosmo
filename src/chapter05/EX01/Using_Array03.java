@@ -32,10 +32,6 @@ public class Using_Array03 {
 	    System.out.println("===============================");
 	    
 		System.out.println(Arrays.toString(a));
-		
-		
-		
-
-	}
+		}
 
 }

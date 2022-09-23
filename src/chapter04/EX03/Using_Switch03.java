@@ -10,12 +10,7 @@ public class Using_Switch03 {
 		      스캐너로 "Silver" 를 넣으면 "은메달 입니다" 를 출력
 		      스캐너로 "Bronze" 를 넣으면 "동메달 입니다" 를 출력
 		      그 외는 메달이 없습니다.
-		      
-		      2. 문제
-		       스캐너로 월을 인풋받아서 해당 월의 총 날짜를
-		       "<월>은 <몇일> 일까지 있습니다."
 		 */
-
 		Scanner sc = new Scanner(System.in);
 		System.out.println("메달을 입력하세요.");
 		String order = sc.next();

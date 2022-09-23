@@ -31,12 +31,6 @@ public class Using_Method02 {
 		
 		Circle donut = new Circle(5, "도넛");
 		donut.call();
-		
-		
-		
-		
-		
 
 	}
-
 }

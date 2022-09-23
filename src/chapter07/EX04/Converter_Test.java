@@ -18,10 +18,7 @@ class Converter {	//환률을 계산하는 클래스
 	void setRate(double rate) {
 		this.rate = rate;
 	}
-	
-	
 }
-
 public class Converter_Test {
 
 	public static void main(String[] args) {
@@ -71,10 +68,5 @@ public class Converter_Test {
 		double d4 = converter.toKWR(100);
 		double d3 = Double.parseDouble(String.format("%.2f", d4));
 		System.out.println("100$는 " + d3 + "만원입니다. ");
-		
-		
-		
-		
 	}
-
 }

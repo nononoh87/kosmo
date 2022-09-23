@@ -54,16 +54,6 @@ public class Using_Array_2D_02 {
 			System.out.println(Arrays.toString(arr1[i]));
 		    }
 		    System.out.println();
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
 	}
 
 }

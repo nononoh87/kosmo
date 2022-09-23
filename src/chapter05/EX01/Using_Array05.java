@@ -43,15 +43,6 @@ public class Using_Array05 {
 		}
 		System.out.println("합계 :" + sum);
 		System.out.println("평균" + sum / (double)count);
-		
-		
-			
-      
-		
-		
-		
-		
-
-	}
+		}
 
 }

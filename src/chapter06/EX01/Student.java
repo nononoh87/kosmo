@@ -17,7 +17,6 @@ public class Student {
     	this.met = met;
     	this.name = name;
     }
-    
     //메소드 : 합과 평균을 계산해서 출력해주는 메소드
     void call () {
     	int sum ;
@@ -26,13 +25,4 @@ public class Student {
     	avg = sum / 3.0 ;
     	System.out.println(name + " 의 총 점수 : " + sum + " 이고, 평균 : " + avg);
     }
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }

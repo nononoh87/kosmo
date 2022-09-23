@@ -6,10 +6,9 @@ public class Using_Switch04 {
 
 	public static void main(String[] args) {
 		/*2. 문제
-	       스캐너로 월을 인풋받아서 해달 월의 총 날짜를
+	       스캐너로 월을 인풋받아서 해당 월의 총 날짜를
 	       "<월>은 <몇일> 일까지 있습니다."
         */
-		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("달을 입력하세요>>>");
 		int month = sc.nextInt();
@@ -31,6 +30,5 @@ public class Using_Switch04 {
 		System.out.printf("%d월 달은 %d일 까지 존재 합니다.", month, day);
 		
 		sc.close();
-	}
-       
+	}      
 }
