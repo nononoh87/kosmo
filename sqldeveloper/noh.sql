@@ -6,7 +6,7 @@ SELECT*FROM dept;
 
 ALTER TABLE dept
     add CONSTRAINT pk_dept_deptno PRIMARY KEY (depno);
---1) student 테이블 만들기
+-- 1. student 테이블 만들기
 CREATE TABLE student
 (
 no      char(4),
@@ -17,23 +17,23 @@ jumin   char(15) not null,
 deptno  number(2),
 CONSTRAINT fk_student_deptno FOREIGN KEY (deptno) REFERENCES dept (deptno)
 );
---2) 학번 컬럼에 기본키(primary key) 제약조건 추가
+-- 2. 학번 컬럼에 기본키(primary key) 제약조건 추가
 alter table student
 add CONSTRAINT pk_student_no PRIMARY KEY (no);
 
---3) 주민번호 컬럼에서 NOT NULL 제약조건 삭제
+-- 3. 주민번호 컬럼에서 NOT NULL 제약조건 삭제
 alter table student
 modify jumin null ;
 
---4) 주소 컬럼에 디폴트 제약조건으로 “서울” 추가
+-- 4. 주소 컬럼에 디폴트 제약조건으로 “서울” 추가
 alter table student
 MODIFY addr default '서울';
 
---5) 성별 컬럼에 체크 제약조건으로 “남성”, “여성” 추가
+-- 5. 성별 컬럼에 체크 제약조건으로 “남성”, “여성” 추가
 alter table student
 modify( check (gender in ('남성','여성')));
 
---[ 확인 ] 레코드 입력시 확인
+-- [ 확인 ] 레코드 입력시 확인
 
 INSERT INTO student(no, name, gender, addr, jumin )
 
@@ -68,7 +68,7 @@ VALUES('8888', '이병헌','서울시 한강', 50);
 -- 외래키인 deptno에 50이 없음
 
 
---6) library 테이블 만들기
+-- 6. library 테이블 만들기
 create table library
 (
 rent_id number(2),
@@ -93,7 +93,7 @@ INSERT INTO library ( rent_id, book_id, hakbun ) VALUES( 4, 'bk004', '4444' );
 
 INSERT INTO library ( rent_id, book_id, hakbun ) VALUES( 5, 'bk005', '5555' );
 -- 오류 : student 의 no에 5555가 없음
---------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------
 DROP TABLE DEPT;
 DROP TABLE student;
 DROP TABLE library;
@@ -119,7 +119,8 @@ CONSTRAINT EMP_CK_GENDER CHECK (GENDER IN ('남성', '여성')),
 CONSTRAINT FK_DEPTNO FOREIGN KEY (DEPTID) REFERENCES DEPT(DEPTID)
 );
 
-----------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------
+
 -- INSERT (TABLE: DEPT)
 INSERT INTO DEPT(DEPTID, DEPTNAME)
 VALUES (10001, 'IT팀');
@@ -152,4 +153,3 @@ SELECT * FROM EMP;
 -- DROP (BOTH)
 DROP TABLE EMP;
 DROP TABLE DEPT;
-

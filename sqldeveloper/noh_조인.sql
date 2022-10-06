@@ -14,7 +14,7 @@ SELECT e.ename ename, d.dname dname, d.deptno deptno
 FROM    emp e INNER JOIN dept d
 on e.deptno = d.deptno;
 
---외부 조인 : 
+--외부 조인
 SELECT e.ename ename, d.dname dname, d.deptno deptno
 FROM    emp e, dept d
 WHERE e.deptno = d.deptno(+);   --안됨
@@ -39,7 +39,8 @@ WHERE e1.mgr = e2.empno(+);
 SELECT e1.empno empno1, e1.ename ename1, e1.mgr mgr1, e2.empno empno2, e2.ename ename2
 FROM emp e1 LEFT OUTER JOIN emp e2
 ON e1.mgr = e2.empno;
-----------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------------------
 
 --[#] 집합(SET)
 
@@ -51,15 +52,16 @@ SELECT empno, ename, job, deptno FROM emp WHERE job='CLERK'
     --MINUS --차집합
 SELECT empno, ename, job, deptno FROM emp WHERE deptno=10;
     --CLARK / KING / MILLER
-------------------------------------------------------------------------------
-[연습]조인
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+--[연습]조인
 
 --1. EMP 테이블에서 사원번호, 이름, 업무, 부서번호와 DEPT 테이블에서 부서명, 근무지를 출력
 select e.empno empno1, e.ename ename1, e.job job1, e.deptno deptno1, 
         d.dname dname1, d.loc loc1
 from emp e left join dept d
 on e.deptno = d.deptno;
-?
 
 --2. SALESMAN 사원만 사원번호, 이름, 급여, 부서명, 근무지를 출력
 select e.empno empno1, e.ename ename1, e.sal sal1, d.dname, d.loc loc1
@@ -67,35 +69,36 @@ from emp e left outer join dept d
 on e.deptno = d.deptno
 where e.job = 'SALESMAN';
 
-?--3. 보너스(comm)를 받는 사원에 대해 이름, 부서명, 위치를 출력
+--3. 보너스(comm)를 받는 사원에 대해 이름, 부서명, 위치를 출력
 select e.ename ename1, d.dname dname1, d.loc loc1
 from emp e left outer join dept d
 on e.deptno = d.deptno
 where e.comm>=0;
-?
+
 --4. 부서별 부서명과 급여 합계를 출력
 select d.dname dname1, sum(e.sal) sumsal1
 from emp e right outer join dept d
 on e.deptno = d.deptno
 group by d.dname;
-?
+
 -- 5. 업무가 ‘MANAGER’인 사원의 정보를 이름, 업무, 부서명, 근무지를 출력
 select e.ename ename1, e.job job1, d.dname dname1, d.loc loc1
 from emp e left outer join dept d
 on e.deptno = d.deptno
 where e.job = 'MANAGER';
 
--------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------
+
+--입사문제
 
 --<스키마>
 --※ 밑줄친 속성은 기본키(Primary Key)이며 ENROLL의 학번은 STUDENT의 학번을 참조하는 
 --외래키(Foreign Key)이고, ENROLL의 강좌번호는 CLASS의 강좌번호를 참조하는 외래키이다. 
-
 --STUDENT(학번 , 학과, 이름) 
 --CLASS(강좌번호, 시간, 강좌이름) 
 --ENROLL(학번, 강좌번호, 학점)
 
---SQL-문제-1) 아래 스키마를 보고 평점이 3.0 이상인 학생들의 이름을 보여주는 SQL작성하시오
+--1. 아래 스키마를 보고 평점이 3.0 이상인 학생들의 이름을 보여주는 SQL작성하시오
 
 SELECT s.이름
 FROM student s, class c, enroll e
@@ -110,7 +113,7 @@ FULL OUTER JOIN CLASS C
 ON E.BUN=C.BUN
 WHERE E.HAKJUM>=3.0;
 
-SQL-문제-2) 다음 중 아래와 같은 테이블에서 Full Outer Join의 결과를 작성하시오
+--2. 다음 중 아래와 같은 테이블에서 Full Outer Join의 결과를 작성하시오
 SELECT E.DEPTNO, E.DNAME, D.DEPTNO, D.DNAME 
 FROM EMP E FULL OUTER JOIN DEPT D
 ON E.DEPTNO = D.DEPTNO;
@@ -122,7 +125,8 @@ DEPTNO DNAME
 30 SALES
 30 KING
 40 WARD
--------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------
+
 --1. 사원명에 ‘L’자가 있는 사원에 대해 이름, 업무, 부서명, 위치를 출력
 SELECT      e.ename ename, e.job job, d.dname dname, d.loc loc
 FROM        emp e, dept d
@@ -138,16 +142,13 @@ WHERE       e.ename like '%L%';
 --GROUP BY
 --HAVING
 --ORDER BY
-?
-
-?
 
 --2. 관리자보다 먼저 입사한 사원에 대해 이름, 입사일, 관리자 이름, 관리자 입사일을 출력
 SELECT e.ename 사원, e.hiredate 입사일, d.ename 관리자, d.hiredate 관리자 입사일
 FROM emp e inner join emp d
     ON e.mgr = d.empno
 WHERE e.hiredate < d.hiredate;
-?
+
 --3. 아래의 결과를 출력 ( 관리자가 없는 KING을 포함하여 모든 사원을 출력 )
 --사번 사원명 매니저사번 매니저명
 --7839 KING 
@@ -162,5 +163,3 @@ WHERE e1.mgr=e2.empno(+);
 SELECT e1.empno empno, e1.ename ename, e2.mgr, e2.ename
 FROM emp e1 left outer join emp e2
     ON e1.mgr=e2.empno;
-
-
