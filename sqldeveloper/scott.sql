@@ -571,3 +571,4 @@ WHERE JOB IN('CLERK','ANALYST') AND SAL not in(1000,3000,5000);
 SELECT * FROM EMP
 where DEPTNO=30 OR MGR='7782';
 
+select * from emp;

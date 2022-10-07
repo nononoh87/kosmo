@@ -164,3 +164,24 @@ select e.* from emp_cp e,dept d
     and e.deptno= d.deptno;
 delete from emp_cp e
     where e.deptno = (select d.deptno from dept d where d.dname='sales');
+    
+-------------------------------------------------------------------------------   
+[복습]
+
+-- 11. scott 또는 ward와 월급이 같은 사원의 정보를 이름, 업무, 급여를 출력
+select ename 이름, job 업무, sal 급여
+from emp
+where sal in (select sal from emp where ename='SCOTT'or ename='WARD');
+
+?-- 12. chicago에서 근무하는 사원과 같은 업무를 하는 사원의 이름, 업무를 출력
+select ename 이름, job 업무
+from emp
+where job in (SELECT job from emp a, dept b where a.deptno = b.deptno and loc='CHICAGO');
+
+-- 13. 부서별(group by)로 월급이 평균 월급보다 높은 사원을 부서번호, 이름, 급여를 출력
+select a.deptno 부서번호, a.ename 이름, a.sal 급여
+from emp a,(select deptno, trunc(avg(sal)) avg from emp group by deptno) b 
+where a.deptno = b.deptno and a.sal > b.avg;
+
+
+
